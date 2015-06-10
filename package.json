@@ -1,7 +1,7 @@
 {
   "name": "gulp-upload",
   "version": "1.0.0",
-  "description": "A template for web.",
+  "description": "Upload file to remote server.",
   "main": "index.js",
   "repository": {
     "type": "git",
