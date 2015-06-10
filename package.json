@@ -1,0 +1,27 @@
+{
+  "name": "gulp-upload",
+  "version": "1.0.0",
+  "description": "A template for web.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:suyu34/gulp-upload.git"
+  },
+  "devDependencies": {
+    "express": "^4.12.4",
+    "gulp-watch": "^4.2.4",
+    "skipper": "^0.5.5"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "suyu34",
+  "license": "MIT",
+  "dependencies": {
+    "formstream": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.5",
+    "through2": "^0.6.5",
+    "urllib": "^2.3.8"
+  }
+}
