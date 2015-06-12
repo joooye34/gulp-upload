@@ -1,6 +1,6 @@
 {
   "name": "gulp-upload",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Upload file to remote server.",
   "main": "index.js",
   "repository": {
@@ -9,13 +9,17 @@
   },
   "devDependencies": {
     "express": "^4.12.4",
-    "gulp-watch": "^4.2.4",
+    "mocha": "^2.2.5",
     "skipper": "^0.5.5"
   },
   "keywords": [
-    "gulp-uoload"
+    "gulp-upload"
   ],
   "author": "suyu34",
+  "engines": {
+    "node": ">= 0.10.0",
+    "iojs": ">= 1.0.0"
+  },
   "license": "MIT",
   "dependencies": {
     "formstream": "^1.0.0",

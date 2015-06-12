@@ -1,22 +1,24 @@
 'use strict';
 
 var gulp = require('gulp');
-var watch = require('gulp-watch');
-var upload = require('./index');
+var upload = require('gulp-upload');
 
 var options = {
-  server: 'http://192.168.0.77:7890/upload'
-}
-var callback = function(err, data, res){
-  if (err) {
-    console.log('error:');
-    console.log(err.toString());
-  } else {
-    console.log(data.toString());
+  server: 'http://192.168.0.77:7890/upload',
+  data: {
+    dirname: 'upload',
+    fileName: 'dest.js'
+  }
+  callback: function (err, data, res) {
+    if (err) {
+      console.log('error:' + err.toString());
+    } else {
+      console.log(data.toString());
+    }
   }
 }
 
-gulp.task('watch', function() {
+gulp.task('upload', function() {
   return gulp.src('server.js')
-  .pipe(upload(options, callback));
+  .pipe(upload(options));
 });

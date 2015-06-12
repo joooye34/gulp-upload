@@ -1,0 +1,8 @@
+.DS_Store
+*.log
+*.node
+
+demo
+test
+node_modules
+gulpfile.js

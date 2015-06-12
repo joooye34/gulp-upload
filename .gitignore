@@ -17,3 +17,5 @@ tmp
 
 node_modules
 gulpfile.js
+test/source
+test/upload
