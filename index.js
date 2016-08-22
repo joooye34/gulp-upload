@@ -40,7 +40,8 @@ module.exports = function(options) {
 
     urllib.request(options.server, {
       method: 'post',
-      headers: form.headers(),
+      timeout: options.timeout || 5000,
+      headers: form.headers(options.headers),
       stream: form
     }, function (err, data, res) {
       callback(err, data, res);
