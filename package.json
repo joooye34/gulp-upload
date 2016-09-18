@@ -8,7 +8,7 @@
     "url": "git@github.com:suyu34/gulp-upload.git"
   },
   "scripts": {
-    "test": "node test/server && mocha test/index"
+    "test": "mocha test/index"
   },
   "dependencies": {
     "formstream": "^1.0.0",
