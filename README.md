@@ -98,6 +98,8 @@ Option     | Type                             | Description
 ---------- | -------------------------------- | --------------
 server     | ((string))(_required_)           | Remote server to upload.
 data       | ((object))                       | The data will put in the field and send to server.If it is a function, it should return result.
+timeout    | ((number))                       |
+headers    | ((object))                       |
 callback   | ((function))                     | It will be used in urllib. [More](https://github.com/node-modules/urllib)
 
 ## License
