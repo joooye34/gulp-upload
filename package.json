@@ -7,6 +7,16 @@
     "type": "git",
     "url": "git@github.com:suyu34/gulp-upload.git"
   },
+  "scripts": {
+    "test": "node test/server && mocha test/index"
+  },
+  "dependencies": {
+    "formstream": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.5",
+    "through2": "^0.6.5",
+    "urllib": "^2.3.8"
+  },
   "devDependencies": {
     "express": "^4.12.4",
     "mocha": "^2.2.5",
@@ -20,12 +30,5 @@
     "node": ">= 0.10.0",
     "iojs": ">= 1.0.0"
   },
-  "license": "MIT",
-  "dependencies": {
-    "formstream": "^1.0.0",
-    "gulp": "^3.9.0",
-    "gulp-util": "^3.0.5",
-    "through2": "^0.6.5",
-    "urllib": "^2.3.8"
-  }
+  "license": "MIT"
 }

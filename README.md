@@ -98,8 +98,9 @@ Option     | Type                             | Description
 ---------- | -------------------------------- | --------------
 server     | ((string))(_required_)           | Remote server to upload.
 data       | ((object))                       | The data will put in the field and send to server.If it is a function, it should return result.
-timeout    | ((number))                       |
-headers    | ((object))                       |
+fileinputname | ((string))                    | To define the name of API.
+timeout    | ((number))                       | It will be used in urllib.
+headers    | ((object))                       | It will be used in urllib.
 callback   | ((function))                     | It will be used in urllib. [More](https://github.com/node-modules/urllib)
 
 ## License

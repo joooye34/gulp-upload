@@ -36,7 +36,9 @@ module.exports = function(options) {
         form.field(key, data[key]);
       }
     }
-    form.file('file', file.path);
+
+    var fileinputname = options.fileinputname || "file";
+    form.file(fileinputname, file.path);
 
     urllib.request(options.server, {
       method: 'post',

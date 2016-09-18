@@ -1,5 +1,6 @@
 'use strict';
 
+var path = require('path');
 var assert = require('assert');
 var fs = require('fs');
 var gulp = require('gulp');
@@ -18,15 +19,23 @@ var options = {
 }
 
 describe('gulp-upload', function() {
+  var filePath = path.join(__dirname, fileName);
+  var destPath = path.join(__dirname, dirname, fileName);
+
+  afterEach(function () {
+    fs.unlinkSync(filePath);
+    fs.unlinkSync(destPath);
+  })
+
   it('should upload successfully', function(done) {
     var app = require('./server');
-    fs.writeFileSync(__dirname + '/source/' + fileName, content, 'utf-8');
+    fs.writeFileSync(filePath, content, 'utf-8');
 
     gulp.task('test', function() {
-      return gulp.src(__dirname + '/source/' + fileName)
+      return gulp.src(filePath)
       .pipe(upload(options))
       .on('end', function(){
-        var destFile = fs.readFileSync(__dirname + dirname + '/' + fileName, 'utf-8');
+        var destFile = fs.readFileSync(destPath, 'utf-8');
         assert.equal(content, destFile.toString());
 
         done();
