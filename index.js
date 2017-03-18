@@ -41,7 +41,7 @@ module.exports = function(options) {
     form.file(fileinputname, file.path);
 
     urllib.request(options.server, {
-      method: 'post',
+      method: options.method || 'post',
       timeout: options.timeout || 5000,
       headers: form.headers(options.headers),
       stream: form
