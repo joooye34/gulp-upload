@@ -1,6 +1,6 @@
 {
   "name": "gulp-upload",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Upload file to remote server.",
   "main": "index.js",
   "repository": {
