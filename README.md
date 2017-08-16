@@ -102,6 +102,7 @@ fileinputname | ((string))                    | To define the name of API.
 timeout    | ((number))                       | It will be used in urllib.
 method     | ((string))                       | It will be used in urllib.
 headers    | ((object))                       | It will be used in urllib.
+auth       | ((string))                       | It will be used in urllib (example, `username:password`)
 callback   | ((function))                     | It will be used in urllib. [More](https://github.com/node-modules/urllib)
 
 ## License
