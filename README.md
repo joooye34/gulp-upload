@@ -1,4 +1,4 @@
-# gulp-upload v0.0.1
+# gulp-upload v1.0.0
 
 > Use urllib to upload file to remote server.
 
@@ -93,16 +93,15 @@ app.listen(port, function(){
 });
 ```
 
-## options
+## plugin options
 Option     | Type                             | Description
 ---------- | -------------------------------- | --------------
 server     | ((string))(_required_)           | Remote server to upload.
 data       | ((object))                       | The data will put in the field and send to server.If it is a function, it should return result.
 fileinputname | ((string))                    | To define the name of API.
-timeout    | ((number))                       | It will be used in urllib.
-method     | ((string))                       | It will be used in urllib.
-headers    | ((object))                       | It will be used in urllib.
-callback   | ((function))                     | It will be used in urllib. [More](https://github.com/node-modules/urllib)
+
+## urllib options
+[https://github.com/node-modules/urllib#api-doc](https://github.com/node-modules/urllib#api-doc)
 
 ## License
 

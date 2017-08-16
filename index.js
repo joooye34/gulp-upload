@@ -1,5 +1,6 @@
 'use strict';
 
+var _ = require('lodash');
 var through = require('through2');
 var gutil = require('gulp-util');
 var PluginError = gutil.PluginError;
@@ -9,6 +10,11 @@ var path = require('path');
 
 // consts
 var PLUGIN_NAME = 'gulp-upload';
+
+var defaultOptions = {
+  method: 'post',
+  timeout: 5000
+}
 
 // exporting the plugin main function
 module.exports = function(options) {
@@ -40,12 +46,13 @@ module.exports = function(options) {
     var fileinputname = options.fileinputname || "file";
     form.file(fileinputname, file.path);
 
-    urllib.request(options.server, {
-      method: options.method || 'post',
-      timeout: options.timeout || 5000,
+    var inputOptions = _.omit(options, 'server', 'data', 'fileinputname')
+    var requestOptions = Object.assign({}, defaultOptions, inputOptions, {
       headers: form.headers(options.headers),
       stream: form
-    }, function (err, data, res) {
+    })
+
+    urllib.request(options.server, requestOptions, function (err, data, res) {
       callback(err, data, res);
       self.push(file);
       next();
